@@ -13,39 +13,34 @@ const searchRequest = {
 
 const client = yelp.client(apiKey);
 
-async function search(response){
+async function searchReviews(businesses){
 
   let i = 0;
   let j = 0;
   
   while (i < 5) {
-    const business = response.jsonBody.businesses[i];
-
-    console.log('-----------------------------------');
-    j = i+1;
-    console.log('Business ' + j);
-    console.log('Name: ' + business.name);
-    console.log('Street: ' + business.location.address1);
-    console.log('City: ' + business.location.city);
-    console.log('');
-    
-    await client.reviews(business.id).then(response => {
-      
-      const review = response.jsonBody.reviews[0];
-      console.log('Review: ' + review.text);
-      console.log('Autor: ' + review.user.name);
-
+    const business = businesses[i];
+    const review = await client.reviews(business.id).then(response => {
+      return response.jsonBody.reviews[0];
     }).catch( e=> {
       console.log(e);
-    })
-
-    console.log('');
+    });
+    j = i+1;
     i++;
+    
+    console.log('----------------------------------------------------------------------');
+    console.log('RANK:    `' + j);
+    console.log('NAME:    ' + business.name);
+    console.log('STREET:  ' + business.location.address1);
+    console.log('CITY:    ' + business.location.city);
+    console.log('REVIEW:  ' + review.text);
+    console.log('AUTHOR:  ' + review.user.name);
+    console.log('');
   }
 }
 
 client.search(searchRequest)
-.then(response => search(response))
+.then(response => searchReviews(response.jsonBody.businesses))
 .catch(e => {
   console.log(e);
 });
