@@ -1,9 +1,9 @@
 # Top 5 ice scream shops in Alpharetta finder.
-This is a simple client to perform a search on the Yelp Fusion API by the top 5 ice scream shops in Alpharetta.
+This is a simple client to perform a search for the top 5 ice scream shops in Alpharetta on the Yelp Fusion API.
 
-This solution is using Yelp Fusion API client for Node.js to call Yelp APIs. 
-When creating an instance of the Yelp Fusion API client, it delivers functions that perform REST requests to the APIs endpoints using Promises and an API Key.
-The REST requests are done using the Node.js module @tonybadguy/call-me-maybe.
+This solution is using [Yelp Fusion API client for Node.js](https://github.com/tonybadguy/yelp-fusion) to call Yelp endpoints. 
+When creating an instance of the Yelp Fusion API client, it delivers functions that perform REST requests to the APIs endpoints using Promises.
+The REST requests are done using the Node.js module [@tonybadguy/call-me-maybe](https://www.npmjs.com/package/@tonybadguy/call-me-maybe).
 
 
 ## Setup
