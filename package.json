@@ -1,0 +1,22 @@
+{
+  "name": "business-finder",
+  "version": "1.0.0",
+  "description": "This is a simple client to perform a search on the Yelp Fusion API by the top 5 ice scream shops in Alpharetta.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelo-kliemann/business-finder.git"
+  },
+  "author": "Marcelo Kliemann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcelo-kliemann/business-finder/issues"
+  },
+  "homepage": "https://github.com/marcelo-kliemann/business-finder#readme",
+  "dependencies": {
+    "yelp-fusion": "^2.0.2"
+  }
+}
