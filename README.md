@@ -1,5 +1,10 @@
-# Top 5 ice scream shops in Alpharetta finder.
-This is a simple client to perform a search on the Yelp Fusion API by the top 5 ice scream shops in Alpharetta.
+# Top 5 ice cream shops in Alpharetta finder.
+This is a simple client to perform a search for the top 5 ice cream shops in Alpharetta on the Yelp Fusion API.
+
+This solution is using [Yelp Fusion API client for Node.js](https://github.com/tonybadguy/yelp-fusion) to call Yelp endpoints. 
+When creating an instance of the Yelp Fusion API client, it delivers functions that perform REST requests to the APIs endpoints using Promises.
+The REST requests are done using the Node.js module [@tonybadguy/call-me-maybe](https://www.npmjs.com/package/@tonybadguy/call-me-maybe).
+
 
 ## Setup
 
@@ -21,7 +26,7 @@ Install the dependences:
 $ npm install 
 ```
 
-Sign up and create an App on the [Yelp Fusion Portal] (https://www.yelp.com/fusion).
+Sign up and create an App on the [Yelp Fusion Portal](https://www.yelp.com/fusion).
 
 Open up the `index.js` file of this project and put your API Key from the [manage app page](https://www.yelp.com/developers/v3/manage_app)
 
@@ -39,15 +44,14 @@ Once you're all setup, you should be able to run the script directly from the co
 $ node index.js
 ```
 
-It will print the top 5 ice scream shops in Alpharetta like the example below:
+It will print in the log the top 5 ice scream shops in Alpharetta like the example below:
 ```
 
-Business 1
-Name: Four Fat Cows
-Street: 64 N Main St
-City: Alpharetta
+RANK:    1
+NAME:    Scream'n Nuts
+STREET:  5950 North Point Pkwy
+CITY:    Alpharetta
+REVIEW:  Step aside diabetes, I am trying this doughnut. The Nutella doughnut is amazing!!! It is jumbo-sized and can definitely be shared among a few.. 
 
-Review: Customer service goes above and beyond! A slight miscommunication was fixed quickly with better customer service than was expected! 
-
-The ice cream is...
-Autor: Brittany W.
+There are...
+AUTHOR:  Sunita M.
