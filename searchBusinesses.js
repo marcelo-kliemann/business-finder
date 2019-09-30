@@ -1,6 +1,6 @@
 'use strict';
 
-const yelp = require('./yelpAPI.js');
+const yelpAPI = require('./yelpAPI.js');
 const print = require('./util/print.js');
 
 /**
@@ -11,14 +11,13 @@ class SearchBusinesses {
   
   constructor(apiKey){
     this.apiKey = apiKey;
-    this.yelpClient = yelp.client(apiKey);
+    this.yelp = yelpAPI.client(apiKey);
   }
 
-
+  
   async getReviews(businessId) {
 
-    let reviews = await this.yelpClient.getReviews(businessId);
-    return JSON.parse(reviews.body);
+    return await this.yelp.getReviews(businessId);
   };
 
 
@@ -31,9 +30,9 @@ class SearchBusinesses {
 
     let businesses;
 
-    await this.yelpClient.search(queryParameters)
+    await this.yelp.search(queryParameters)
       .then(response => {
-        businesses = JSON.parse(response.body).businesses;
+        businesses = response;
         console.log('');
         console.log('Total businesses retrieved: '.concat(businesses.length));
       })

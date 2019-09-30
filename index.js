@@ -4,7 +4,6 @@
 // from https://www.yelp.com/developers/v3/manage_app
 const apiKey = '<YOUR_API_KEY>';
 
-
 //OPTION 1: 
 //Using Yelp Fusion Client library. 
 //Uncomment to use.
