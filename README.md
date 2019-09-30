@@ -1,7 +1,7 @@
 # Top 5 ice cream shops in Alpharetta finder.
 This is a simple client to perform a search for the top 5 ice cream shops in Alpharetta on the Yelp Fusion API.
 
-This solution uses standard way to request API endpoints AND can also use [Yelp Fusion API client for Node.js](https://github.com/tonybadguy/yelp-fusion) to call Yelp endpoints. 
+This solution uses [Axios](https://www.npmjs.com/package/axios) to call Yelp endpoints AND can also use [Yelp Fusion API client for Node.js](https://github.com/tonybadguy/yelp-fusion) for it. 
 When creating an instance of the Yelp Fusion API client, it delivers functions that perform REST requests to the APIs endpoints using Promises.
 The REST requests are done using the Node.js module [@tonybadguy/call-me-maybe](https://www.npmjs.com/package/@tonybadguy/call-me-maybe).
 
