@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/marcelo-kliemann/business-finder#readme",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "yelp-fusion": "^2.0.2"
   }
 }
